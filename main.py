@@ -1,11 +1,11 @@
 import random
 
 
-cash = 10
+cash = 1000
 
 balance = 0
-a = 0.5
-b = 1.7
+a = 0.9
+b = 1.15
 
 stock1 = 2
 stock2 = 5
@@ -46,10 +46,21 @@ while x == 0:
     vstock = vystock1 + vystock2 + vystock3 + vyindexfund
     value = balance + cash + vstock
     print(" ")
+    if indexfund > 10000:
+        print("Sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell sell!")
+        b = 1
+    elif indexfund < 101:
+        print("Buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy buy!")
+        a = 0.9
+        b = 1.15
 
 
     response = input("Welcome to the Federal Reserve Banking Game. What action would you like to do? To see current balance, type Balance. To withdraw money, type Withdraw. To deposit money, type Deposit. To re-nagotiate you interest rate, type Interest. To buy stock, type Stock. To sell stock, type Sell. To talk with a teller, please type Teller. To exit, type Exit. Please mind the capitol letters. ")
     print(" ")
+    if response == "a":
+        print(a)
+    elif response == "b":
+        print(b)
     if response == "Balance":
         print(f"Your balance is {balance}. You have {cash} cash on hand. Your interest rate is {interest_rate}%. Your stock value is {vstock}. Your net worth is {value}. ")
     elif response == "Withdraw":
@@ -138,6 +149,8 @@ while x == 0:
             else:
                 cash = cash - indexfund*5
                 yindexfund = yindexfund + 5
+        else:
+            stock = "nothing"
         print(f"Thanks for buying {stock}.")
     elif response == "Sell":
         sell = input(f"You have {ystock1} shares of Stock 1, {ystock2} shares of Stock 2, {ystock3} shares of Stock 3 and {yindexfund} shares of Index Fund. Which one do you want to sell? ")
